@@ -15,7 +15,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping
-    @RequestMapping("/users")
+    @RequestMapping("/api/users")
     public ResponseEntity<User> findUserByJwtToken(String jwt) throws Exception {
         User user = userService.findUserByJwtToken(jwt);
         return new ResponseEntity<>(user, HttpStatus.OK);
