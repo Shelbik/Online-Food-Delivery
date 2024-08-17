@@ -7,7 +7,7 @@ import com.rest.request.CreateFoodRequest;
 
 import java.util.List;
 
-public interface FoodInterface {
+public interface FoodService {
 
     public Food createFood(CreateFoodRequest req, Category category, Restaurant restaurant);
 
