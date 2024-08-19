@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/admin/ingredients")
 public class IngredientController {
@@ -35,5 +37,15 @@ public class IngredientController {
         return new ResponseEntity<>(ingredientsItem, HttpStatus.OK);
     }
 
+    @GetMapping("/restaurant/{id}")
+    public ResponseEntity<List<IngredientsItem>> getRestaurantIngredients(@PathVariable long id) throws Exception {
+        List<IngredientsItem> items = ingredietnsService.findRestaurantsIngredients(id);
+        return new ResponseEntity<>(items, HttpStatus.OK);
+    }
 
+    @GetMapping("/restaurant/{id}/category")
+    public ResponseEntity<IngredientCategory> findRestaurantIngredientCategory(@PathVariable long id) throws Exception {
+        IngredientCategory ingredientCategory = ingredietnsService.findIngredientCategoryById(id);
+        return new ResponseEntity<>(ingredientCategory, HttpStatus.OK);
+    }
 }

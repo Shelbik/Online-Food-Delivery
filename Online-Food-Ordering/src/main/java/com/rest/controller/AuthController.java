@@ -9,7 +9,7 @@ import com.rest.repository.CartRepository;
 import com.rest.repository.UsersRepository;
 import com.rest.request.LoginRequest;
 import com.rest.response.AuthResponce;
-import com.rest.service.CustomUserDetailsService;
+import com.rest.service.imp.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,7 +43,7 @@ public class AuthController {
 
     @PostMapping("/signup")
     public ResponseEntity<AuthResponce> createUserHandle(@RequestBody User user) throws Exception {
-        User isEmail = usersRepository.findAllByEmail(user.getEmail());
+        User isEmail = usersRepository.findByEmail(user.getEmail());
 
         if (isEmail != null) {
             throw new Exception("Email is already used with another account");

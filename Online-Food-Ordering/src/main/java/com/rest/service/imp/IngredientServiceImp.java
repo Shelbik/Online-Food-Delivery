@@ -1,10 +1,12 @@
-package com.rest.service;
+package com.rest.service.imp;
 
 import com.rest.model.IngredientCategory;
 import com.rest.model.IngredientsItem;
 import com.rest.model.Restaurant;
 import com.rest.repository.IngredienItemRepository;
 import com.rest.repository.IngredientCategoryRepository;
+import com.rest.service.IngredietnsService;
+import com.rest.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

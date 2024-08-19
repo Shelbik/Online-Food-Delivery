@@ -1,8 +1,9 @@
-package com.rest.service;
+package com.rest.service.imp;
 
 import com.rest.config.JwtProvider;
 import com.rest.model.User;
 import com.rest.repository.UsersRepository;
+import com.rest.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

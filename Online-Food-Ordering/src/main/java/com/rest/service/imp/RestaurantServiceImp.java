@@ -1,4 +1,4 @@
-package com.rest.service;
+package com.rest.service.imp;
 
 import com.rest.dto.RestaurantDto;
 import com.rest.model.Address;
@@ -8,6 +8,7 @@ import com.rest.repository.AddressRepository;
 import com.rest.repository.RestaurantRepository;
 import com.rest.repository.UsersRepository;
 import com.rest.request.CreateRestaurantRequest;
+import com.rest.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
